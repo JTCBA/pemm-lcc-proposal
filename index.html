@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCC 2026 Strategic Briefing | Jared Taylor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; scroll-behavior: smooth; }
+        .bg-hunter { background-color: #064e3b; }
+        .text-gold { color: #d4af37; }
+        .border-gold { border-color: #d4af37; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+        .fade-in { animation: fadeIn 0.6s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        .path-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; border: 2px solid #e2e8f0; }
+        .path-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        .path-card.selected { border-color: #d4af37; background-color: #fefce8; }
+    </style>
+</head>
+<body class="min-h-screen pb-20">
+
+    <header class="bg-hunter text-white sticky top-0 z-50 shadow-lg border-b-2 border-gold">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-xl font-bold tracking-tight italic">Core Business Analytics, LLC</h1>
+                <p class="text-[10px] text-gold uppercase tracking-widest font-black">Strategic Advisor: PEMM LLC</p>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#summary" class="hover:text-gold transition-colors">Summary</a>
+                <a href="#catalog" class="hover:text-gold transition-colors">Service Catalog</a>
+                <a href="#comparison" class="hover:text-gold transition-colors">Economics</a>
+                <a href="#selector" class="text-gold border border-gold px-4 py-2 rounded-lg">Select Path</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12 space-y-24">
+
+        <section id="summary" class="fade-in">
+            <div class="bg-white rounded-3xl p-8 md:p-12 card-shadow border border-slate-200 relative overflow-hidden">
+                <div class="max-w-3xl relative z-10">
+                    <h2 class="text-5xl font-black text-slate-900 mb-8 tracking-tighter uppercase">The 2026 Digital Blueprint</h2>
+                    <p class="text-xl text-slate-600 leading-relaxed mb-6">
+                        Josh, this briefing provides a 360-degree view of the Livingston Country Club technical transition. We are moving from a "Legacy Club" posture to a <strong>"Modern Enterprise"</strong> model.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+                        <div class="border-l-4 border-hunter pl-4">
+                            <p class="font-bold text-slate-900">Capital Efficiency</p>
+                            <p class="text-slate-500">Leveraging existing Chronogolf/Lightspeed data bypasses $26k+ in year-one waste.</p>
+                        </div>
+                        <div class="border-l-4 border-hunter pl-4">
+                            <p class="font-bold text-slate-900">Immediate Go-Live</p>
+                            <p class="text-slate-500">Infrastructure setup begins immediately to ensure Day 1 readiness for the new F&B operator.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 flex items-center space-x-6">
+                    <a href="https://docs.google.com/document/d/1hBB4_ke7rS0y2iT2ihqm2NoOs9pgU8IfeucT8_Sj4jE/edit?usp=sharing" target="_blank" class="px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-black transition-all shadow-xl">
+                        📄 VIEW FULL CONTRACTUAL DOC
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalog" class="fade-in">
+            <h2 class="text-3xl font-black text-slate-900 mb-10 text-center uppercase tracking-widest">Service Delivery Catalog</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-3xl card-shadow border border-slate-100">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xs font-black text-hunter tracking-widest uppercase">Infrastructure (CapEx)</h3>
+                        <span class="bg-hunter text-white text-[10px] px-3 py-1 rounded-full font-bold">One-Time</span>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="bg-emerald-50 p-2 rounded-lg mr-4">🍔</div>
+                            <div>
+                                <p class="font-bold text-slate-900">F&B POS Architecture</p>
+                                <p class="text-xs text-slate-500 mt-1">Full K-Series menu build, table mapping, KDS printer routing, and staff "Train-the-Trainer" sessions.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-emerald-50 p-2 rounded-lg mr-4">🛒</div>
+                            <div>
+                                <p class="font-bold text-slate-900">Retail SKU Sync</p>
+                                <p class="text-xs text-slate-500 mt-1">Unified inventory system syncing physical stock with a year-round WordPress digital storefront.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-slate-900 p-8 rounded-3xl card-shadow text-white border-b-4 border-gold">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xs font-black text-gold tracking-widest uppercase">Management (OpEx)</h3>
+                        <span class="bg-gold text-slate-900 text-[10px] px-3 py-1 rounded-full font-bold">Seasonal Retainer</span>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="bg-slate-800 p-2 rounded-lg mr-4">📊</div>
+                            <div>
+                                <p class="font-bold text-gold">Analytics Stewardship</p>
+                                <p class="text-xs text-slate-400 mt-1">Monthly business intelligence reports combining Google Analytics, Google Ads, and Lightspeed sales trends.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-slate-800 p-2 rounded-lg mr-4">🎯</div>
+                            <div>
+                                <p class="font-bold text-gold">Google Ads Growth (Optional)</p>
+                                <p class="text-xs text-slate-400 mt-1">Strategic management of high-intent local search keywords to drive new member inquiries and tee-time sales.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparison" class="fade-in">
+            <div class="bg-white rounded-3xl p-10 card-shadow border border-slate-200">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-black text-slate-900 uppercase tracking-widest">Financial Modeling</h2>
+                    <p class="text-slate-500 mt-2 italic">Total Year 1 Project Outlay (CapEx + 7 Months OpEx)</p>
+                </div>
+                <div class="relative h-[400px]">
+                    <canvas id="quadChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="selector" class="fade-in">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-black text-slate-900 uppercase tracking-tighter">Choose Your Path</h2>
+                <p class="text-slate-500 mt-2">Select a strategic tier below to generate an approval response.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="path-card p-6 rounded-2xl bg-white flex flex-col h-full" onclick="selectPath('A', this)">
+                    <h4 class="text-hunter font-black text-xs uppercase mb-4">Option A</h4>
+                    <p class="text-2xl font-black text-slate-900 mb-2">Optimization</p>
+                    <p class="text-[10px] text-slate-400 uppercase font-bold mb-6 italic">Standard Suite</p>
+                    <div class="text-sm space-y-3 flex-grow border-t pt-4">
+                        <p class="font-bold">$14,500 <span class="text-[10px] text-slate-400">CapEx</span></p>
+                        <p class="font-bold">$1,200/mo <span class="text-[10px] text-slate-400">OpEx</span></p>
+                    </div>
+                </div>
+
+                <div class="path-card p-6 rounded-2xl bg-emerald-50 border-hunter flex flex-col h-full" onclick="selectPath('A_ADS', this)">
+                    <div class="bg-hunter text-white text-[8px] px-2 py-1 rounded absolute -mt-10 font-bold uppercase tracking-widest">Recommended</div>
+                    <h4 class="text-hunter font-black text-xs uppercase mb-4">Option A + Ads</h4>
+                    <p class="text-2xl font-black text-slate-900 mb-2">Growth Suite</p>
+                    <p class="text-[10px] text-emerald-600 uppercase font-bold mb-6 italic">Including Google Ads</p>
+                    <div class="text-sm space-y-3 flex-grow border-t pt-4">
+                        <p class="font-bold text-hunter">$16,000 <span class="text-[10px] text-slate-400">CapEx</span></p>
+                        <p class="font-bold text-hunter">$1,700/mo <span class="text-[10px] text-slate-400">OpEx</span></p>
+                    </div>
+                </div>
+
+                <div class="path-card p-6 rounded-2xl bg-white flex flex-col h-full opacity-60" onclick="selectPath('B', this)">
+                    <h4 class="text-slate-400 font-black text-xs uppercase mb-4">Option B</h4>
+                    <p class="text-2xl font-black text-slate-900 mb-2">Migration</p>
+                    <p class="text-[10px] text-slate-400 uppercase font-bold mb-6 italic">ERP Shift</p>
+                    <div class="text-sm space-y-3 flex-grow border-t pt-4">
+                        <p class="font-bold">$22,500 <span class="text-[10px] text-slate-400">CapEx</span></p>
+                        <p class="font-bold">$1,800/mo <span class="text-[10px] text-slate-400">OpEx</span></p>
+                    </div>
+                </div>
+
+                <div class="path-card p-6 rounded-2xl bg-white flex flex-col h-full opacity-60" onclick="selectPath('B_ADS', this)">
+                    <h4 class="text-slate-400 font-black text-xs uppercase mb-4">Option B + Ads</h4>
+                    <p class="text-2xl font-black text-slate-900 mb-2">Full Transition</p>
+                    <p class="text-[10px] text-slate-400 uppercase font-bold mb-6 italic">ERP + Growth</p>
+                    <div class="text-sm space-y-3 flex-grow border-t pt-4">
+                        <p class="font-bold">$24,000 <span class="text-[10px] text-slate-400">CapEx</span></p>
+                        <p class="font-bold">$2,300/mo <span class="text-[10px] text-slate-400">OpEx</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="approval-box" class="mt-12 text-center hidden">
+                <div class="bg-hunter p-12 rounded-3xl shadow-2xl fade-in border-b-8 border-gold">
+                    <h3 id="approval-title" class="text-3xl font-bold mb-4 text-white uppercase tracking-tight">Confirm Selection</h3>
+                    <p id="approval-desc" class="text-slate-300 mb-10 max-w-lg mx-auto italic leading-relaxed"></p>
+                    <a id="mail-link" href="#" class="inline-block px-12 py-5 bg-gold text-white font-black rounded-2xl hover:scale-105 transition-all uppercase tracking-widest text-sm shadow-xl border-2 border-white">
+                        Send Approval Email
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Economics Comparison Chart
+        window.onload = function() {
+            const ctx = document.getElementById('quadChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['A (Optimize)', 'A + Ads', 'B (Migrate)', 'B + Ads'],
+                    datasets: [{
+                        label: 'Total Year 1 Commitment ($)',
+                        data: [22900, 27900, 35100, 40100],
+                        backgroundColor: ['#e2e8f0', '#064e3b', '#cbd5e1', '#94a3b8'],
+                        borderRadius: 12,
+                        barThickness: 50
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { beginAtZero: true, grid: { display: false }, ticks: { color: '#94a3b8' } },
+                        x: { grid: { display: false }, ticks: { font: { weight: 'bold' }, color: '#334155' } }
+                    }
+                }
+            });
+        };
+
+        const signature = "%0D%0A%0D%0AThank you,%0D%0AJosh Bruckle%0D%0APEMM LLC";
+
+        const pathData = {
+            'A': {
+                title: "Path A Selected",
+                desc: "Proceeding with standard optimization of the current Lightspeed/Chronogolf stack. Immediate focus on Day 1 readiness for F&B and Retail operations.",
+                subject: "Approval: LCC 2026 Strategy - OPTION A",
+                body: "Hi Jared,%0D%0A%0D%0AWe have reviewed the briefing and want to move forward with OPTION A (Optimization) for $14,500 CapEx and $1,200/mo OpEx. %0D%0A%0D%0APlease initiate Phase 1 of the build-out immediately." + signature
+            },
+            'A_ADS': {
+                title: "Path A + Ads Selected",
+                desc: "Selecting the full Growth Suite. This path couples infrastructure optimization with high-intent search acquisition to drive new membership inquiries.",
+                subject: "Approval: LCC 2026 Strategy - OPTION A and ADS",
+                body: "Hi Jared,%0D%0A%0D%0AWe are selecting the Growth Suite (Option A and Ads). We want the full $16,000 CapEx package and the $1,700/mo OpEx management fee. %0D%0A%0D%0ALet's get the keyword research and conversion tracking started." + signature
+            },
+            'B': {
+                title: "Path B Selected",
+                desc: "Initiating the full Jonas Club Software migration. Acknowledging the extended 90-day implementation timeline and $22,500 setup fee.",
+                subject: "Approval: LCC 2026 Strategy - OPTION B",
+                body: "Hi Jared,%0D%0A%0D%0AWe have decided to proceed with Option B (Migration). Let's coordinate on the data mapping requirements for the transition." + signature
+            },
+            'B_ADS': {
+                title: "Path B + Ads Selected",
+                desc: "Total transition management. Coupling a full software migration with external search acquisition for a ground-up management reboot.",
+                subject: "Approval: LCC 2026 Strategy - OPTION B and ADS",
+                body: "Hi Jared,%0D%0A%0D%0AWe want to proceed with Option B and Google Ads. Please let us know the timeline for managing this transition." + signature
+            }
+        };
+
+        function selectPath(key, element) {
+            document.querySelectorAll('.path-card').forEach(el => el.classList.remove('selected', 'border-hunter'));
+            element.classList.add('selected', 'border-hunter');
+            
+            const box = document.getElementById('approval-box');
+            const data = pathData[key];
+            
+            box.classList.remove('hidden');
+            document.getElementById('approval-title').innerText = data.title;
+            document.getElementById('approval-desc').innerText = data.desc;
+            document.getElementById('mail-link').href = `mailto:jared@corebics.com?subject=${data.subject}&body=${data.body}`;
+            
+            box.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
